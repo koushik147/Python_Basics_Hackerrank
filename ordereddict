@@ -1,0 +1,10 @@
+from collections import OrderedDict
+n=int(input())
+ord_dict = OrderedDict()
+for i in range(n):
+    product, amount = input().rsplit(" ",1)
+    #res = map(int, amount)
+    ord_dict[product] = ord_dict.get(product, 0) + int(amount)
+
+for i,j in ord_dict.items():
+    print(i,j)

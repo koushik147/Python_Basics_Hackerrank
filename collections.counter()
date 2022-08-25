@@ -1,0 +1,11 @@
+from collections import Counter
+x=int(input())
+shoe_size = Counter(list(map(int, input().split())))
+n=int(input())
+total_amount = 0
+for i in range(n):
+    order_size, order_amount = map(int, input().split())
+    if shoe_size.get(order_size) and shoe_size.get(order_size) != 0:
+        total_amount = total_amount + order_amount
+        shoe_size[order_size] = shoe_size.get(order_size) - 1
+print(total_amount)

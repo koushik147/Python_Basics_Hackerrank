@@ -1,0 +1,5 @@
+n=int(input())
+value = input().split().index("MARKS")
+#print(value)
+marks = map(int, [input().split()[value] for i in range(n)])
+print(sum(marks)/n)

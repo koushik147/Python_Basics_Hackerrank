@@ -1,0 +1,15 @@
+if __name__ == '__main__':
+    arr = []
+    for i in range(int(input())):
+        name=input()
+        score=float(input())
+        arr.append([name,score])
+        
+    lowest = min(score for name, score in arr)
+    arr = [(name, score) for name, score in arr if score > lowest]
+    lowest = min(score for name, score in arr)
+    arr = [(name, score) for name, score in arr if score == lowest]
+
+    arr.sort()
+    for name, score in arr:
+        print(name)
